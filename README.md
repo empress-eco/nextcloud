@@ -1,41 +1,59 @@
-# Nextcloud Integration
+<div align="center">
+  <img src="https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png" alt="Nextcloud Integration Logo">
+  <p>Automated, comprehensive, and customizable backup solution for your database, config, and files to Nextcloud. 
+  <br /> 
+  <a href="https://empress.eco/">Explore the Docs</a>
+  ·
+  <a href="https://github.com/empress-eco/nextcloud/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/empress-eco/nextcloud/issues/new?assignees=&labels=&template=feature_request.md&title=">Request Feature</a>
+  </p>
+</div>
 
-Custom Frappe App for Nextcloud Backup
+## About The Project
 
-### Features
-This app lets you take backup of your database, config and files to your Nextcloud instance. You can configure it to take daily or weekly backups.
+Nextcloud Integration is a full-featured backup solution tailored for developers and businesses. It ensures secure, automated, and flexible backups of your database, configuration, and files to your Nextcloud instance, providing an added layer of security for your precious data.
+
+### 🌟 Key Features
+- **Automated backups**: Choose between daily or weekly schedules for your backups.
+- **Comprehensive scope**: Back up your database, configuration, and files all at once.
+- **Email notifications**: Stay informed about successful backups or get alerted when they fail.
+- **Customizable backup location**: Choose where on your Nextcloud instance you want your backups to be stored.
+
+## Technical Stack and Setup Instructions
+
+### Prerequisites
+To use Nextcloud Integration, you need a running Nextcloud account and a site where you can install the *nextcloud-integration* app.
 
 ### Installation
-On your site you can download and install *nextcloud-integration* app using
+Clone the repository and install the Nextcloud Integration app using the following commands:
 
-```
-bench get-app https://github.com/frappe/nextcloud-integration.git
+```sh
+git clone https://github.com/empress-eco/nextcloud.git
+bench get-app nextcloud_integration
 bench --site {site_name} install-app nextcloud_integration
 ```
 
-### Configuration
+After successful installation, search for **Nextcloud Settings** in the **Awesome Bar** to configure the backup settings as per your requirement.
 
-After successful installation of *nextcloud-integration* app You can search for **Nextcloud Settings** in the **Awesome Bar** which will direct you to the following **Nextcloud Settings** page
+## Usage
 
-<kbd><img src=".github/nextcloud_setting_screen.png" alt="Nextcloud Setting Screen" /></kbd>
+Using Nextcloud Integration is straightforward. After installing and configuring the app, click on the **Backup Now** button. The backup process usually takes a few minutes to half an hour, depending on the size of your backup.
 
-* **Username**: Your *Nextcloud Account Username*
-* **Password**: Your *Nextcloud Account password* or *App Password* you might have created for this app.
-* **Nextcloud URL**: URL of site where Nextcloud Account exist. *For eg("https://example.com")*.
-Optionally you can also provide a port number after your URL as *("https://example.com:443")*
-* **WebDav URL**: You will find this in your Nextcloud Account. Example: */remote.php/dav/files/*{email_address}*/*
-* **Path to Upload Folder**: You can provide the *path* of folder where you would like your files to be uploaded.
-	* **NOTE**:
-		1. The folder should have already been created.
-		2. If not provided, a folder *Frappe Backups* will be created.
-* **Backup Frequency**: One of either *Daily* or *Weekly* can be choosen.
-* **Backup Files**: Check this option to *Backup public and private files along with the database*.
-* **Send Notifications To**: Email on which the notification for Backups should be sent.
-* **Send Email for Successful Backup**: Check this option to receive email for successful backups, by default emails for failed backups are sent.
+## Contribution Guidelines
 
-After saving the configuration click on **Backup Now** button and verify if the files where uploaded in your *Nextcloud* instance.
+We welcome contributions from the community. Here's how you can contribute:
 
-**NOTE**: This process generally takes from a few minutes to half an hour depending on the size of your backup.
+1. **Fork the Project**: Create a copy of the project in your GitHub account.
+2. **Create a Feature Branch**: Create a new branch (git checkout -b feature/AmazingFeature).
+3. **Commit Your Changes**: Make changes and commit them (git commit -m 'Add some AmazingFeature').
+4. **Push to the Branch**: Push your changes to the branch (git push origin feature/AmazingFeature).
+5. **Open a Pull Request**: Create a new pull request from your forked repository.
+
+## License and Acknowledgements
 
 ### License
-This repository has been released under the [MIT License](LICENSE).
+This project is licensed under the MIT License. Your contributions are also licensed under this same License.
+
+### Acknowledgements
+We express our profound gratitude to the Empress Community for their foundational contributions. Their innovative tools and dedicated support have played a crucial role in building this project. We are also thankful to the team at [Empress](https://empress.eco/) for creating this useful tool and to the open-source community for their invaluable contributions.
